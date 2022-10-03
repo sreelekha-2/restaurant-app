@@ -4,9 +4,11 @@
     @include flexLayout(row);
     justify-content: space-between;
     align-items: center;
-    padding:20px 0px;
+    padding:20px 50px;
     position: fixed;
-    width:100%;
+    right:0;
+    left:0;
+
     background-color: rgba(0, 0, 0,0.4);
     
     .logo{
@@ -22,6 +24,7 @@
 .nav-links{
     list-style-type: none;
     padding-left: 0;
+    // margin: auto;
     @include flexLayout(row);
     
     a{
@@ -34,6 +37,7 @@
             color:black;
             background-color:aqua;
         }
+        
 }
 }
 .banner-head{
@@ -88,6 +92,12 @@
     width:25%;
     height:250px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+   @include transition(box-shadow 0.3s);
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    
+    }
 
     .menu-title{
         @include headingStyles($italic-font,$regular-fontsize);
@@ -128,8 +138,14 @@
     a{
         @include linksStyle;
         margin:10px;
+       
         i{
             font-size:25px;
+            @include transition(color 0.8s,transform 0.6s);
+            &:hover{
+                color:darkblue;
+                transform: translateY(-10px);
+            }
         }
     }
 }
