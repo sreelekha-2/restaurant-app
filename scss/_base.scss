@@ -1,0 +1,37 @@
+
+
+$white-color:#FFFFFF;
+$pink-color:pink;
+
+$regular-fontsize:20px;
+
+$josefin-font:'Josefin Sans',sans-serif;;
+$italic-font:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+$main-head-font:40px;
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+@mixin headingStyles($family,$fontsize:50px){
+    font-size:$fontsize;
+    font-family: $family;
+}
+
+@mixin transition($params...){
+    transition:($params)
+}
+
+@mixin flexLayout($direction){
+    display:flex;
+    flex-direction: $direction;
+   
+}
+
+@mixin linksStyle{
+    text-decoration: none;
+    color:$white-color;
+}

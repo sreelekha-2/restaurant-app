@@ -1,0 +1,135 @@
+
+/*header*/
+.navbar{
+    @include flexLayout(row);
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0px;
+    position: fixed;
+    width:100%;
+    background-color: rgba(0, 0, 0,0.4);
+    
+    .logo{
+        @include linksStyle;
+        font-size: 40px;
+        @include transition(color 0.6s);
+        &:hover{
+            color:deepskyblue;
+        }
+    }
+
+}
+.nav-links{
+    list-style-type: none;
+    padding-left: 0;
+    @include flexLayout(row);
+    
+    a{
+        @include linksStyle;
+        font-family: $josefin-font;
+        font-size:20px;
+        padding:8px 14px;
+        @include transition(color 0.6s,background-color 0.8s);
+        &:hover{
+            color:black;
+            background-color:aqua;
+        }
+}
+}
+.banner-head{
+    color:$pink-color;
+    font-size:50px;
+    font-family: $josefin-font;
+}
+
+.explore-btn{
+    cursor: pointer;
+    background-color: transparent;
+    border:2px solid $pink-color;
+    padding:10px 35px;
+    font-size:22px;
+    color:$white-color;
+    border-radius: 8px;;
+    background-color:$pink-color;
+    margin:20px 0px;
+    @include transition(background-color 0.9s);
+    &:hover{
+        background-color: palevioletred;
+    }
+}
+
+/*main*/
+.container{
+    padding:25px 40px;
+}
+
+/*menu section*/
+.wrapper{
+    margin:30px 0px;
+}
+.section-head{
+    @include headingStyles($josefin-font,$main-head-font);
+    margin-bottom:25px;
+}
+.menu-container{
+    @include flexLayout(row);
+    
+}
+
+
+.menu-container .menu-item+.menu-item{
+    margin-left:20px;
+}
+.menu-item{
+    text-align: center;
+    background-color: $white-color;
+    box-shadow: 2px 2px;
+    padding:20px 15px;
+    width:25%;
+    height:250px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    .menu-title{
+        @include headingStyles($italic-font,$regular-fontsize);
+        font-style: italic;
+
+       
+    }
+}
+.menu-img{
+    width:180px;
+    height:180px;
+    border-radius: 50%;;
+    margin-bottom:15px;
+}
+
+/*about us section*/
+.aboutus-desc{
+    font-family: $italic-font;
+    font-style: italic;
+    font-size:18px;
+}
+
+/*follow us*/
+.followus-section{
+    background-color: orange;
+    padding:20px 10px;
+    
+    @include flexLayout(column);
+    align-items: center
+}
+.followus-subhead{
+    text-transform: uppercase;
+    @include headingStyles($josefin-font,30px);
+};
+.footer-icons-container{
+    @include flexLayout(row);
+    margin-top:15px;
+    a{
+        @include linksStyle;
+        margin:10px;
+        i{
+            font-size:25px;
+        }
+    }
+}
