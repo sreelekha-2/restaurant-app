@@ -70,6 +70,7 @@
 /*menu section*/
 .wrapper{
     margin:30px 0px;
+    padding:100px 0px;
 }
 .section-head{
     @include headingStyles($josefin-font,$main-head-font);
@@ -123,7 +124,7 @@
 /*follow us*/
 .followus-section{
     background-color: orange;
-    padding:20px 10px;
+    padding:180px 10px;
     
     @include flexLayout(column);
     align-items: center

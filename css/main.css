@@ -62,7 +62,8 @@
 
 /*menu section*/
 .wrapper {
-  margin: 30px 0px; }
+  margin: 30px 0px;
+  padding: 100px 0px; }
 
 .section-head {
   font-size: 40px;
@@ -108,7 +109,7 @@
 /*follow us*/
 .followus-section {
   background-color: orange;
-  padding: 20px 10px;
+  padding: 180px 10px;
   display: flex;
   flex-direction: column;
   align-items: center; }
